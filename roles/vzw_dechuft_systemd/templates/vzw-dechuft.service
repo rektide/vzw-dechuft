@@ -1,0 +1,12 @@
+[Unit]
+Description=Verizon Wireless Dechufter SPDYProxy
+After=network.target
+
+[Service]
+User={{username}}
+ExecStart={{dir}}/bin/spdyproxy -key {{key}} -cert {{cert}} -p {{port}} {{'B'+bind if bind|default(False)}} --logFile {{dir}}/spdyproxy.log
+Restart=always
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,2 @@
+---
+- user: name="{{username}}" shell=/bin/false groups="{{groups|default(group)|default(omit)}}" system="{{system}}" home="{{dirname}}"

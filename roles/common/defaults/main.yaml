@@ -1,0 +1,10 @@
+dirname: vzw-dechuft
+port: 8788
+username: "{{dirname if system or add_user else ansible_user_id}}"
+groupname: "{{group|default(groups[0])|default(username)}}"
+system: True
+systemd: False
+repo: https://github.com/igrigorik/node-spdyproxy
+dir: /opt/{{name}}
+systemd_: /etc/systemd/system/
+add_user: False

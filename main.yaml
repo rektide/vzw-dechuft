@@ -1,0 +1,32 @@
+---
+- hosts: 
+   - chuft_user
+  sudo: True
+  roles:
+   - common
+   - vzw_dechuft_user
+
+- hosts:
+   - chuft
+   - chuft_user
+   - chuft_systemd
+   - chuft_avahi
+  roles:
+   - common
+   - vzw_dechuft
+   - vzw_dechuft_key
+
+- hosts:
+   - chuft_systemd
+  #sudo: # tasks will sudo if system daemon
+  roles:
+   - common
+   - vzw_dechuft_systemd
+
+- hosts:
+   - chuft
+   - chuft_avahi
+  sudo: True
+  roles:
+   - common
+   - vzw_dechuft_avahi

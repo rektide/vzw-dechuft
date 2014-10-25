@@ -1,0 +1,4 @@
+---
+- files: dir={{dir|basename}} state=directory
+- git: repo={{repo}} dest={{dir}} update=yes
+- shell: chdir={{dir}} npm link

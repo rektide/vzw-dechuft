@@ -1,0 +1,2 @@
+- template: src=vzw-dechuft.service dest="{{systemd}}vzw-dechuft.service"
+- service: name="vzw-dechuft.serice" enabled=yes state=started

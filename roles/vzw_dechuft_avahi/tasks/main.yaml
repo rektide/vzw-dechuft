@@ -1,0 +1,2 @@
+---
+- template: src=vzw-dechuft-avahi.service dest="{{avahi}}/vzw-dechuft-avahi.service" owner="{{username}}"

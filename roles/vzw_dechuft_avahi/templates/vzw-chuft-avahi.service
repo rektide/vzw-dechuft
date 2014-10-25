@@ -1,0 +1,11 @@
+<?xml version="1.0" standalone='no'?><!--*-nxml-*-->
+<!DOCTYPE service-group SYSTEM "avahi-service.dtd">
+<!-- See avahi.service(5) for more information about this configuration file -->
+
+<service-group>
+	<name replace-wildcards="yes">%h</name>
+	<servi
+		<type>_wpac._spdy._tcp</type>
+		<port>{{port}}</port>
+	</service>
+</service-group>

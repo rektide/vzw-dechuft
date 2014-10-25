@@ -1,0 +1,16 @@
+dirname: vzw-dechuft
+port: 8788
+username: "{{dirname}}"
+system: True
+systemd: False
+repo: https://github.com/igrigorik/node-spdyproxy
+dir: /opt/{{name}}
+systemd_: /etc/systemd/system/
+
+[chuft_user:vars]
+system: False
+dir: ~/.local/opt/{{name}}
+systemd_: ~/.config/systemd/user/
+
+[chuft_group:vars]
+group: "{{username}}"
